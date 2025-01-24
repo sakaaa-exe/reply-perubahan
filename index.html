@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id" style="--vh: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perubahan</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(135deg, #2d3b5e, #1a2736); /* Background lebih gelap */
+            background-size: 200% 200%;
+            animation: gradientMove 6s infinite ease-in-out;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            color: #fff; /* Teks putih */
+            overflow: hidden;
+            margin: 0;
+            position: relative;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 420px;
+            padding: 20px;
+            height: 100%;
+        }
+
+        .card {
+            background: #1a2736; /* Card background lebih gelap */
+            color: #fff; /* Teks putih */
+            width: 100%;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); /* Shadow lebih gelap */
+            text-align: center;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Profil Header */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-picture {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #4c6ef5; /* Border berwarna biru */
+        }
+
+        .profile-info h2 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: #4c6ef5; /* Warna biru untuk teks */
+        }
+
+        .profile-info p {
+            font-size: 0.9rem;
+            color: #ddd; /* Teks lebih terang */
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #4c6ef5; /* Warna biru */
+            animation: slideInLeft 1s ease-out;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        p {
+            font-size: 0.8rem;
+            margin-bottom: 25px;
+            color: #ddd; /* Teks lebih terang */
+            animation: fadeInText 1.5s ease-out;
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .response-message {
+            margin-top: 30px;
+            background: #333; /* Background lebih gelap */
+            border-radius: 10px;
+            padding: 15px;
+            color: #fff; /* Teks putih */
+            font-size: 1rem;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25); /* Shadow lebih gelap */
+            animation: fadeInText 1.5s ease-out;
+        }
+
+        .credit {
+            font-size: 0.8rem;
+            color: #bbb; /* Teks lebih terang */
+            margin-top: 30px;
+            font-style: italic;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Latar belakang modal lebih gelap */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: #222; /* Latar belakang modal lebih gelap */
+            border-radius: 20px;
+            padding: 25px 30px;
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 20px;
+            color: #bbb; /* Teks close lebih terang */
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            color: #4c6ef5; /* Warna biru saat hover */
+        }
+
+        .status-icon {
+            font-size: 60px;
+            color: #4c6ef5; /* Ikon status biru */
+        }
+
+        #modal-title {
+            font-size: 1.5rem;
+            color: #4c6ef5; /* Judul modal biru */
+            margin-bottom: 10px;
+        }
+
+        #modal-message {
+            font-size: 1rem;
+            color: #fff; /* Teks modal putih */
+        }
+
+    </style>
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="profile-header">
+                <img src="logo.png" alt="Foto Profil" class="profile-picture">
+                <div class="profile-info">
+                    <h2>@sakhrdty</h2>
+                    <p>Evaluasi Diri 2025</p>
+                </div>
+            </div>
+            <h1>Saka Level Up!!??</h1>
+            <p>📬 Pesan Anonim Baru Diterima! 📬</p>
+            <div id="responseMessage" class="response-message">
+                <!-- Pesan balasan akan muncul di sini -->
+            </div>
+            <p class="credit">@sakhrdty & @sadtyy_bot - Creator of this Website</p>
+        </div>
+    </div>
+    <div id="statusModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-icon">
+                <i id="modal-icon" class="status-icon"></i>
+            </div>
+            <h2 id="modal-title"></h2>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+    <script>
+    // Ambil parameter dari URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const message = urlParams.get('message');
+
+    // Jika ada parameter pesan, tampilkan di halaman
+    if (message) {
+        document.getElementById("responseMessage").textContent = decodeURIComponent(message);
+    } else {
+        document.getElementById("responseMessage").textContent = "Tidak ada pesan yang ditemukan.";
+    }
+    </script>
+</body>
+</html>
